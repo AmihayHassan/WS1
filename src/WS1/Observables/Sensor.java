@@ -12,5 +12,5 @@ abstract public class Sensor {
 
     abstract protected int read();
 
-    public void check(){};
+    public void check() {}
 }

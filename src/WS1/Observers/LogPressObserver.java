@@ -1,4 +1,8 @@
 package WS1.Observers;
 
-public class LogPressObserver {
+public class LogPressObserver implements Observer {
+    @Override
+    public void update(int value) {
+
+    }
 }
