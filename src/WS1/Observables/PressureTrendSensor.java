@@ -11,6 +11,11 @@ public class PressureTrendSensor extends Sensor{
         super(type, interval);
     }
 
+    @Override
+    protected int read() {
+        return calc().ordinal();
+    }
+
     public Trend calc() {
         // check if the readings are increasing or decreasing
         if (lastReading1 < lastReading2 && lastReading2 < lastReading3) {
@@ -20,11 +25,6 @@ public class PressureTrendSensor extends Sensor{
         } else {
             return Trend.STABLE;
         }
-    }
-
-    @Override
-    protected int read() {
-        return 0;
     }
 
     public void check() {

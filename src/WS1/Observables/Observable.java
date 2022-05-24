@@ -5,14 +5,13 @@ import WS1.Observers.Observer;
 import java.util.Vector;
 
 public class Observable {
-    private Vector<Observer> observers;
+    private Vector<Observer> observers = null;
     private boolean changed = false;
 
-    public Observable() {
-        observers = new Vector<>();
-    }
-
     public void addObserver(Observer o) {
+        if (observers == null) {
+            observers = new Vector<>();
+        }
         if (o == null) {
             throw new NullPointerException();
         }
