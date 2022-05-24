@@ -1,4 +1,4 @@
-package WS1.Observables.;
+package WS1.Observables;
 
 import WS1.Observables.AlarmClockRecord;
 import WS1.Observables.AlarmListener;
