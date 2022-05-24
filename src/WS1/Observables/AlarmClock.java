@@ -20,11 +20,18 @@ public class AlarmClock {
     }
 
     protected void tic() {
-        //TODO: fix
+        for (AlarmClockRecord record : itsAlarmClockRecords) {
+            if (record.getRemainingTime() - CLOCK_INTERVAL_MILLIS <= 0) {
+                record.getListener().wakeup();
+                record.setRemainingTime(record.getInterval());
+            } else {
+                record.setRemainingTime(record.getRemainingTime() - CLOCK_INTERVAL_MILLIS);
+            }
+        }
     }
 
     public void register(int interval, AlarmListener pal) {
-        //TODO: fix
+        itsAlarmClockRecords.add(new AlarmClockRecord(interval, pal));
     }
 }
 
