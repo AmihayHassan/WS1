@@ -8,9 +8,10 @@ import java.util.ArrayList;
 public class AlarmClock {
     public final int CLOCK_INTERVAL_MILLIS = 100;
     protected static AlarmClock instance = null;
-    private ArrayList<AlarmClockRecord> itsAlarmClockRecords = new ArrayList();
+    private final ArrayList<AlarmClockRecord> itsAlarmClockRecords = new ArrayList();
 
     protected AlarmClock() {
+        System.out.println("AlarmClock was created");
     }
 
     public static AlarmClock theInstance() {

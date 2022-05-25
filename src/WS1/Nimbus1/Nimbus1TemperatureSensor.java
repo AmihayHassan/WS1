@@ -1,5 +1,6 @@
 package WS1.Nimbus1;
 
+import WS1.Observables.AlarmClock;
 import WS1.Observables.Sensor;
 
 import java.util.Random;
@@ -7,8 +8,9 @@ import java.util.Random;
 public class Nimbus1TemperatureSensor extends Sensor {
     Random rnd;
 
-    public Nimbus1TemperatureSensor(String type, int interval) {
-        super(type, interval);
+    public Nimbus1TemperatureSensor(String type, int interval, AlarmClock alarmClock) {
+        super(type, interval, alarmClock);
+        System.out.println("Nimbus1TemperatureSensor was created");
         rnd = RandomSupplier.getRnd();
     }
 
