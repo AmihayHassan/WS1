@@ -18,7 +18,7 @@ public class PressureTrendSensor extends Observable implements Observer {
     public PressureTrendSensor(Sensor sensor) {
         lastReading1 = lastReading2 = lastReading3 = 0;
         PressureState = lastState = Trend.STABLE;
-        System.out.println("PressureTrendSensor was created");
+//        System.out.println("PressureTrendSensor was created");
         sensor.addObserver(this);
     }
 
