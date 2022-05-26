@@ -10,13 +10,11 @@ public class Nimbus1TemperatureSensor extends Sensor {
 
     public Nimbus1TemperatureSensor(String type, int interval, AlarmClock alarmClock) {
         super(type, interval, alarmClock);
-        System.out.println("Nimbus1TemperatureSensor was created");
         rnd = RandomSupplier.getRnd();
     }
 
     @Override
     public int read() {
-        // use the RandomSupplier to generate a random value between 0 and 40
-        return rnd.nextInt(41);
+        return rnd.nextInt(40);
     }
 }

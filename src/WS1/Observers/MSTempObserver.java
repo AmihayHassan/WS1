@@ -4,6 +4,7 @@ public class MSTempObserver implements Observer {
     private final MonitoringScreen ms;
 
     public MSTempObserver(MonitoringScreen ms) {
+        System.out.println("MSTempObserver was created");
         this.ms = ms;
     }
 

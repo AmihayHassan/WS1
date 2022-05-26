@@ -4,7 +4,6 @@ public class SensorAlarmListener implements AlarmListener {
     private Sensor sensor;
 
     public SensorAlarmListener(Sensor sensor) {
-        System.out.println("SensorAlarmListener was created");
         this.sensor = sensor;
     }
 

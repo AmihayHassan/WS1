@@ -11,7 +11,6 @@ public class AlarmClock {
     private final ArrayList<AlarmClockRecord> itsAlarmClockRecords = new ArrayList();
 
     protected AlarmClock() {
-        System.out.println("AlarmClock was created");
     }
 
     public static AlarmClock theInstance() {

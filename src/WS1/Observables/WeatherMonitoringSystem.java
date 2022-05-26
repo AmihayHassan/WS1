@@ -16,8 +16,8 @@ public class WeatherMonitoringSystem {
     public WeatherMonitoringSystem() {
         System.out.println("WeatherMonitoringSystem was created");
         AlarmClock ac = Nimbus1Clock.theInstance();
-        itsPressureSensor = new Nimbus1PressureSensor("millibars", 1100, ac);
-        itsTemperatureSensor = new Nimbus1TemperatureSensor("Celcius", 700, ac);
+        itsPressureSensor = new Nimbus1PressureSensor("pressure", 1100, ac);
+        itsTemperatureSensor = new Nimbus1TemperatureSensor("temperature", 700, ac);
         itsPressureTrendSensor = new PressureTrendSensor(itsPressureSensor);
     }
 

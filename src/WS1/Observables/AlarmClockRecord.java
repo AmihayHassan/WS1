@@ -6,7 +6,6 @@ public class AlarmClockRecord {
     AlarmListener listener;
 
     public AlarmClockRecord(int interval, AlarmListener listener) {
-        System.out.println("AlarmClockRecord was created");
         this.remainingTime = this.interval = interval;
         this.listener = listener;
     }

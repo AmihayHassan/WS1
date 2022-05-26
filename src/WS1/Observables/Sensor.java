@@ -1,16 +1,17 @@
 package WS1.Observables;
 
 abstract public class Sensor extends Observable {
+    int lastReading;
+    int interval;
+    String type;
 
     public Sensor(String type, int interval, AlarmClock ac) {
         this.interval = interval;
         this.type = type;
         ac.register(interval, new SensorAlarmListener(this));
+        System.out.println(type + " registered to clock");
     }
 
-    int lastReading;
-    int interval;
-    String type;
 
     abstract protected int read();
 
